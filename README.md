@@ -1,7 +1,7 @@
 # 408考研笔记
 序：本仓库为本人在学习计算机考研专业课期间所作的笔记及教材，所有笔记均用Obsidian编写，有pdf和markdown两种格式。有需要obsidian源码及插件的请issues。
 ## 数据结构篇
-[![](https://img.shields.io/badge/datastructure%20-blue)](https://github.com/HDZ12/-408-/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/READEME.md)
+[![](https://img.shields.io/badge/data-structure%20-blue)](https://github.com/HDZ12/-408-/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/READEME.md)
 [![](https://img.shields.io/badge/pdf%20-red)](https://github.com/HDZ12/-408-/tree/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/PDF)
 
 [![image](https://github.com/user-attachments/assets/7971ad91-e7ef-45bf-ab45-9871fb479c6f)](https://github.com/HDZ12/-408-/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%94%E8%AE%B0/%E7%BB%AA%E8%AE%BA.md)
@@ -17,7 +17,7 @@
 [![](https://img.shields.io/badge/单链表代码%20-yellow)](https://github.com/HDZ12/-408-/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%94%E8%AE%B0/%E5%8D%95%E9%93%BE%E8%A1%A8%E4%BB%A3%E7%A0%81%E9%A2%98.md)
 [![](https://img.shields.io/badge/树与二叉树代码%20-orange)](https://github.com/HDZ12/-408-/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E7%AC%94%E8%AE%B0/%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E4%BB%A3%E7%A0%81.md)
 ## 计算机组成原理篇
-[![](https://img.shields.io/badge/computerorganization%20-blue)](https://github.com/HDZ12/-408-/blob/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E7%AC%94%E8%AE%B0/READEME.md)
+[![](https://img.shields.io/badge/computer-organization%20-blue)](https://github.com/HDZ12/-408-/blob/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E7%AC%94%E8%AE%B0/READEME.md)
 [![](https://img.shields.io/badge/pdf%20-red)](https://github.com/HDZ12/-408-/tree/main/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/pdf)
 
 
