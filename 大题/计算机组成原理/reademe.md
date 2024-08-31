@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/cc1dfba1-7991-459b-9b31-62d99887a171)[2011统考真题]
+[2011统考真题]
 假定在一个8位字长的计算机中运行如下C程序段：
 ```C++
 unsigned int x = 134;
