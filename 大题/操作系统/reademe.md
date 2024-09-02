@@ -6,9 +6,11 @@ cpuTime定时加1,且waitTime置O;进程处于就绪态时，cpuTime置O,waitTim
 
 1. 若调度程序只将nice的值作为进程的优先数，即priority=nice,则可能会出现饥饿
 现象。为什么?
-因为cputime在执行态时加一，在执行完进入就绪态又变为0，所有处于就绪态的进程cputime都为零，这样无法判定哪个没执行过
-可能一直处于就绪态
+由于采用了静态优先数，当就绪队列中总有优先数较小的进程时，优先数较大的进程一
+直没有机会运行，因而会出现饥饿现象。
 
 2. 使用nice,cpuTime和waitTime设计一种动态优先数计算方法，以避免产生饥饿现象，
 并说明waitTime的作用。
 
+priority = nice+k1 * cputime-k2 * waitTIme,k1>0,k2>0,分别用来调整cpuTime和waitTime在priority中所占的比例。若一个进程的运行时间较长，则其cpuTime就增加，进而降低其优先级：若一个进程的等待时间较长，则其waitTime增加，进而会提高其优先级。于是，wait Time就可使长时间等待的进程优先数减少，进
+而避免出现饥饿现象。
