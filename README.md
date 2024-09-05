@@ -1,5 +1,6 @@
 # 408考研笔记
-序：本仓库为本人在学习计算机考研专业课期间所作的笔记及教材，所有笔记均用Obsidian编写，有pdf和markdown两种格式。有需要obsidian源码及插件的请issues。
+>[!NOTE]
+>序：本仓库为本人在学习计算机考研专业课期间所作的笔记及教材，所有笔记均用Obsidian编写，有pdf和markdown两种格式。有需要obsidian源码及插件的请issues。
 ## 数据结构篇
 [![](https://img.shields.io/badge/data-structure%20-blue)](https://github.com/HDZ12/-408-/blob/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/READEME.md)
 [![](https://img.shields.io/badge/pdf%20-red)](https://github.com/HDZ12/-408-/tree/main/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/PDF)
