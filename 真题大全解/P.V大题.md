@@ -1,4 +1,4 @@
-![1731550651463](https://github.com/user-attachments/assets/586ecf03-85f9-43aa-a1f0-07d538f6cc29)# 2009 
+# 2009 
 ![1731547060175](https://github.com/user-attachments/assets/9f18c78b-a2ae-4d85-8789-e72ac0b33c22)
 ```C
 semaphore empty=N;//空的位置
