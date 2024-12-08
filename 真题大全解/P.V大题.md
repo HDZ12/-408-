@@ -1,4 +1,4 @@
-# 2009 
+![1731550651463](https://github.com/user-attachments/assets/586ecf03-85f9-43aa-a1f0-07d538f6cc29)# 2009 
 ![1731547060175](https://github.com/user-attachments/assets/9f18c78b-a2ae-4d85-8789-e72ac0b33c22)
 ```C
 semaphore empty=N;//空的位置
@@ -43,7 +43,7 @@ p3(){
 
 
   
-# 2010
+# 2011
 ![1731548461169](https://github.com/user-attachments/assets/66ef52db-9ed3-44ef-b69e-c861c31243b3)
 ```C
 semaphore empty=10;//空座位
@@ -73,6 +73,61 @@ cobegin{
 	}
 	}
 } 
+
 ```
 ![1733571248985](https://github.com/user-attachments/assets/52281a45-cbfd-4124-ac2a-96b98453ceee)
+# 2013
+![1731549848649](https://github.com/user-attachments/assets/d30eaa28-7c62-4db8-8f93-be8152b9bd3d)
+![1731549862712](https://github.com/user-attachments/assets/8490fde9-4542-4ad2-a584-91dcbc6bf6d0)
+
+```C
+semaphore empty = 500 ; // 还能容纳多少人
+semaphore full = 0 ； //已经有多少人在里面
+semaphore mutex = 1; //进,出门的互斥访问
+cobegin 
+	参观者进程 i：
+	{
+		P(empty);
+		P(mutex);
+			进门；
+		V(mutex);
+			V(full);
+			参观；
+		P(mutex);
+			出门；
+		V(mutex);
+		P(full);
+		V(empty);
+	}
+```
+# 2014
+![1731550651463](https://github.com/user-attachments/assets/e315abad-32e0-4f5b-be93-9a95acb287bb)
+```C
+semaphore empty = 1000; // 缓冲区空位数量；
+semaphore full = 0; //缓冲区产品数量；
+semaphore mutex1 = 1;//消费者之间的互斥
+semaphore mutex2 = 1;//生产者消费者访问缓冲区互斥；
+生产者 i：
+{
+	P(empty);
+	P(mutex2);
+	生产一件产品；
+	V(mutex2);
+	V(full);
+}
+消费者 i：
+{
+	p(mutex1);
+		for(int i=0;i<10;i++){
+			P(full);
+			P(mutex2);
+			取走一件产品；
+			V(mutex2);
+			V(empty);
+			消费产品；
+		}
+	V(mutex1);
+}
+```
+
 
