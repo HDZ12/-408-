@@ -129,5 +129,76 @@ semaphore mutex2 = 1;//生产者消费者访问缓冲区互斥；
 	V(mutex1);
 }
 ```
+# 2015
+![1731552352870](https://github.com/user-attachments/assets/dcdca4af-94f4-4414-a6b4-dfe94dcd045e)
+```C
+semaphore empty1 = M-x; //A的空位置；
+semaphore full1 = x; //A 的邮件数量；
+semaphore empty2 = N-y；// B的空位置；
+semaphore full2 = y； //B的邮件数量；
+semaphore mutex_A = 1;
+semaphore mutex_B = 1;
+A{
+	P(full1);
+	P(mutex_A);
+	从 A 中取出一个邮件；
+	V(mutex_A)
+	V(empty1);
+	回答问题并提出一个新问题；
+	P(empty2);
+	p(mutex_B);
+	将新邮件放入B的邮箱；
+	V(mutex_B);
+	V(full2);
+}
+B{
+	P(full2);
+	P(mutex_B)
+	从B中取出一个邮件；
+	V(mutex_B)
+	V(empty2);
+	回答并提出一个新问题；
+	P(empty1);
+	P(mutex_A)
+	将新邮件放入A；
+	V(mutex_A)
+	V(full1);
+}
+```
+# 2017
+![1731558161819](https://github.com/user-attachments/assets/ed6d96e0-7481-4a4d-944d-e1719c8bb77b)
+```C
+semaphore mutex_y1=1;//thread 1,thread3对y的互斥访问
+semaphore mutex_y2=1;//thread 2,thread3对y的互斥访问；
+semaphore mutex_z=1;//对z的互斥访问
+thread1{
+	cnum w;
+	P(mutex_y1);
+	w=add(x,y);
+	V(mutex_y1);
+}
+thread2{
+	cnum w;
+	P(mutex_y2);
+	P(mutex_z);
+	w=add(y,z);
+	V(mutex_y2);
+	V(mutex_z);
+}
+thread3{
+	cnum w;
+	w.a=1;
+	w.b=1;
+	P(mutex_z)
+	z=add(z,w);
+	V(mutex_z);
+	P(mutex_y1);
+	P(mutex_y2);
+	y=add(y,w);
+	V(mutex_y1);
+	V(mutex_y2);
+}
+```
 
+![1733723552756](https://github.com/user-attachments/assets/24b9eac4-916d-49dd-8994-1d05358c0691)
 
