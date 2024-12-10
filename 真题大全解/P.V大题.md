@@ -201,4 +201,57 @@ thread3{
 ```
 
 ![1733723552756](https://github.com/user-attachments/assets/24b9eac4-916d-49dd-8994-1d05358c0691)
+# 2019
+![1731559256568](https://github.com/user-attachments/assets/8656a792-f765-4776-ab64-458d513cc370)
+```C
+semaphore bow; //空碗数量；
+semaphore chopstick[n];//筷子的互斥访问
+bow = min(n-1,m);
+for(int i=0;i<n;i++)
+	chopstick[i]=1;
+哲学家 i(){
+	while(1){
+		P(bow);
+		P(chopstick[i]);
+		P(chopstick[(i+1)%n]);
+		进餐；
+		V(chopstick[i]);
+		V(chopstick[(i+1)%n]);
+		V(bow);
+	}
+}
+```
+![1733811764108](https://github.com/user-attachments/assets/660a1903-f4e4-4704-999a-638ada3da562)
+# 2020
 
+![1731560107033](https://github.com/user-attachments/assets/30fdc18a-5ea9-42e4-95e4-ca6f3d6580c0)
+
+```C
+semaphore Sac = 0; //A与C的同步；
+semaphore Sbc = 0; //B与C的同步；
+semaphore Sce = 0；//C与E之间的同步；
+semaphore Sde = 0；//D与E之间的同步；
+A(){
+	A操作执行；
+	V(Sac);
+}
+B(){
+	B操作执行；
+	V(Sbc);
+}
+C(){
+	P(Sac);
+	P(Sbc);
+	C操作执行；
+	V(Sce);
+}
+D(){
+	D操作执行；
+	V(Sde);
+}
+E(){
+	P(Sce);
+	P(Sde);
+	E操作执行；
+}
+```
